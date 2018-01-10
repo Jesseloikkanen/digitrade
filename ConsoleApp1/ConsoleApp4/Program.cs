@@ -4,33 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace arrays4
+namespace sting4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ohjema arpoo kaksiulotteisen kokonaislukutaulukkoon arvot väliltä 0-100");
-            int[,] arrayNumber = new int[10, 20];
-            Random rnd = new Random();
-            Console.WriteLine("[X, Y] = Arvo ");
+            Console.Write("Kirjoita jotain: ");
+            string userInput;
+            userInput = Console.ReadLine().ToUpper();
 
-            for (int i = 0; i < 10; i++)
+            userInput = userInput.Replace(" ", "");
+
+
+
+            if (IsPalindrome(userInput))
             {
-                for (int y = 0; y < 20; y++)
-                {
-                    arrayNumber[i, y] = rnd.Next(0, 100);
-                    if (arrayNumber[i, y] < 10)
-                    {
-                        Console.WriteLine($"[{i}, {y}] = 0{arrayNumber[i, y]}");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"[{i}, {y}] = {arrayNumber[i, y]}");
-                    }
-                }
+                Console.WriteLine("Syötteesi on palindromi");
+            }
+            else
+            {
+                Console.WriteLine("Syötteesi ei ole palindromi");
             }
             Console.ReadKey();
+
+        }
+        static bool IsPalindrome(string xx)
+        {
+            bool isPalindrome = true;
+            for (int i = 0; i < xx.Length; i++)
+            {
+                int j = xx.Length - i - 1;
+                if (xx[i] != xx[j])
+                {
+                    isPalindrome = false;
+                    break;
+                }
+                else if (i > j)
+                {
+                    break;
+                }
+
+            }
+            return isPalindrome;
         }
     }
 }

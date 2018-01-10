@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEA75F78-9D72-43EE-943B-214FE7E0BEB6}</ProjectGuid>
+    <ProjectGuid>{19981F59-C55B-401C-9A74-46E8EB40C3CA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp3</RootNamespace>
-    <AssemblyName>ConsoleApp3</AssemblyName>
+    <RootNamespace>sting5</RootNamespace>
+    <AssemblyName>sting5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
